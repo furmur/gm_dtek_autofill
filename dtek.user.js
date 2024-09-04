@@ -94,7 +94,7 @@ function script_injection_func() {
 
       //override autocomplete() function for DisconSchedule.ajax.formSubmit answer handler
       DisconSchedule.autocomplete = function(inp, data, key_preset) {
-        val_val = house_num.toLowerCase()
+        let val_val = house_num.toLowerCase()
         let i_index = data.indexOf(house_num.toLowerCase())
         if(i_index) {
           DisconSchedule.alertMessageBlock(key_preset, i_index, false);
