@@ -2,7 +2,7 @@
 // @name gm_dtek_autofill
 // @description dtek-oem.com.ua/ua/shutdowns address autofill
 // @author      furmur@pm.me
-// @version     0.0.1
+// @version     0.0.2
 // @namespace   https://github.com/furmur
 // @include     https://www.dtek-oem.com.ua/ua/shutdowns
 // @run-at      document-start
