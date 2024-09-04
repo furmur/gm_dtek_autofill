@@ -19,7 +19,7 @@ function script_injection_func() {
 
     //add button for saving city/street/house_num to the local storage
     let container = document.createElement('div'), containerStyle = container.style
-    let cssObj = {position: 'absolute', bottom: '7%', left:'4%', 'z-index': 3}
+    let cssObj = {position: 'absolute', top: '7%', left:'4%', 'z-index': 3}
     Object.keys(cssObj).forEach(key => containerStyle[key] = cssObj[key])
     document.body.appendChild(container)
 
