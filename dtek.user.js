@@ -2,7 +2,7 @@
 // @name gm_dtek_autofill
 // @description dtek-oem.com.ua/ua/shutdowns address autofill
 // @author      furmur@pm.me
-// @version     0.0.2
+// @version     0.0.3
 // @namespace   https://github.com/furmur
 // @include     https://www.dtek-oem.com.ua/ua/shutdowns
 // @run-at      document-start
@@ -91,10 +91,12 @@ function script_injection_func() {
           { name: "street", value: street}
         ]
       }
+      DisconSchedule.form.removeData = function() {}
+      DisconSchedule.form.data = function() { return true }
 
       //override autocomplete() function for DisconSchedule.ajax.formSubmit answer handler
       DisconSchedule.autocomplete = function(inp, data, key_preset) {
-        let val_val = house_num.toLowerCase()
+        val_val = house_num.toLowerCase()
         let i_index = data.indexOf(house_num.toLowerCase())
         if(i_index) {
           DisconSchedule.alertMessageBlock(key_preset, i_index, false);
